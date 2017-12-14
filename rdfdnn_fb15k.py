@@ -55,7 +55,7 @@ model.fit([s_train,o_train],p_train,epochs=10)
 
 #save
 weights = model.get_weights()
-pd.to_pickle(weights, "weights/fb15k_weights.pkl")
+pd.to_pickle(weights, "fb15k_weights.pkl")
 
 #test
 p_pred = model.predict([s_test, o_test])
