@@ -4,7 +4,8 @@ Predicting relations between RDF entities by Deep Neural Network
 
 
 # EXECUTION
-Execute rdfdnn_fb15k.py or rdfdnn_wn18.py
+Please unzip data.zip at first.
+Execute rdfdnn_fb15k.py or rdfdnn_wn18.py.
 
 
 # DATA

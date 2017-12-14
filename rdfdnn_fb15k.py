@@ -22,7 +22,7 @@ from keras.regularizers import l2
 #define model
 inst_voc = fb.n_inst
 prop_voc = fb.n_prop
-entity_dim = 30
+entity_dim = 50
 relation_dim = 30
 
 S_input = Input(shape=(1,), dtype="int32", name="S_inpput")
@@ -51,7 +51,11 @@ model.compile(optimizer="adam",
               metrics=["accuracy"])
 
 #train
-model.fit([s_train,o_train],p_train)
+model.fit([s_train,o_train],p_train,epochs=10)
+
+#save
+weights = model.get_weights()
+pd.to_pickle(weights, "weights/fb15k_weights.pkl")
 
 #test
 p_pred = model.predict([s_test, o_test])

@@ -50,7 +50,11 @@ model.compile(optimizer="adam",
               metrics=["accuracy"])
 
 #train
-model.fit([s_train,o_train],p_train)
+model.fit([s_train,o_train],p_train,epochs=10)
+
+#save
+weights = model.get_weights()
+pd.to_pickle(weights, "weights/wn18_weights.pkl")
 
 #test
 p_pred = model.predict([s_test, o_test])
