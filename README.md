@@ -13,7 +13,7 @@ FB15k and WN18 are the same as the ones used in the paper "Translating Embedding
 https://everest.hds.utc.fr/doku.php?id=en:transe
 
 # Experiment Environment
-tensorflow 1.4.1 
-Keras 2.1.2 
-CUDA 8.0.61
-Cudnn 6.0.20
+- tensorflow 1.4.1 
+- Keras 2.1.2 
+- CUDA 8.0.61
+- Cudnn 6.0.20
